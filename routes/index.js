@@ -10,7 +10,7 @@ router.get('/projects/:id', function(req, res, next) {
   
   if( id < 0 ){
     
-    res.status(400).json({
+    res.status(404).json({
       message: 'BAD REQUEST'
     })
 
