@@ -7,7 +7,7 @@
     "start": "node index.js",
     "prestart": "npm install",
     "pretest": "npm install",
-    "test": "./node_modules/.bin/mocha test"
+    "test": "./node_modules/.bin/mocha test --exit"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
