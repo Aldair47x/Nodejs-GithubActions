@@ -40,6 +40,16 @@ describe('http_basics', () => {
                 done()
             })
     });
+    
+    it('Should return BAD REQUEST message if the request param is not valid', done => {
+        chai.request(server)
+            .get('/projects/')
+            .then(response => {
+                response.body.message.should.eql('Dañando código en directo');
+                done()
+            })
+
+    });
 
     it('Should return a 404 if the requested id is not present in data - 1', done => {
         chai.request(server)
