@@ -29,6 +29,17 @@ describe('http_basics', () => {
             })
 
     });
+    
+    it('Dañando codigo en vivo', done => {
+        chai.request(server)
+            .get('/projects/-1')
+            .then(response => {
+      
+                response.body.message.should.eql('Dañando codigo en vivo');
+                done()
+            })
+
+    });
 
     it('Should return a 400 if the request param is not valid - 2', done => {
         chai.request(server)
