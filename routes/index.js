@@ -37,7 +37,7 @@ router.get('/projects/:id', function(req, res, next) {
 router.get('/projects', function(req, res, next) {
   
   res.status(400).json({
-    message: 'BAD REQUEST'
+    message: 'BAD REQUEST :)'
   })
 
 });
